@@ -4,6 +4,7 @@ import { MapPin, Phone } from 'lucide-react'
 import { BreweryPreview } from '@/lib/interfaces'
 import { SiteInfoItem } from '../SiteInfoItem'
 import BreweryPreviewAvatar from '../Avatar/BreweryPreviewAvatar'
+import { RedirectButton } from '../Button'
 
 interface Props extends BreweryPreview {}
 
@@ -26,9 +27,9 @@ export function BreweryCardPreview({ id, name, avatar, address, phone }: Props) 
 				</div>
 			</div>
 
-			<Link className='button primaryButton' href={`/dashboard/breweries/${id}`}>
+			<RedirectButton variant='primary' href={`/dashboard/breweries/${id}`}>
 				Ver más
-			</Link>
+			</RedirectButton>
 		</article>
 	)
 }

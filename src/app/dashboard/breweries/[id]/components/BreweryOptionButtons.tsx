@@ -9,7 +9,7 @@ export function BreweryOptionButtons() {
 			<Button variant='primary' onClick={() => alert('Funcionalidad en desarrollo')}>
 				Reservar mesa
 			</Button>
-			<Button variant='primary' onClick={() => alert('Funcionalidad en desarrollo')}>
+			<Button variant='secondary' onClick={() => alert('Funcionalidad en desarrollo')}>
 				Opciones de transporte
 			</Button>
 		</div>

@@ -7,9 +7,9 @@ import { usePathname, redirect } from 'next/navigation'
 export function Footer() {
 	const pathname = usePathname()
 
-	const calendarIsActive = pathname === '/calendar'
-	const homeIsActive = pathname === '/'
-	const chatIsActive = pathname === '/chat'
+	const calendarIsActive = pathname === '/dashboard/calendar'
+	const homeIsActive = pathname === '/dashboard'
+	const chatIsActive = pathname === '/dashboard/chat'
 
 	return (
 		<footer className={styles.footer}>
@@ -19,7 +19,7 @@ export function Footer() {
 					<span className={calendarIsActive ? `${styles.textActive}` : ''}>Calendario</span>
 				</li>
 				<li onClick={() => redirect('/')}>
-					<House fill={homeIsActive ? 'var(--purple)' : ''} color={pathname === '/' ? 'var(--purple)' : 'var(--foreground)'} />
+					<House fill={homeIsActive ? 'var(--purple)' : ''} color={homeIsActive ? 'var(--purple)' : 'var(--foreground)'} />
 					<span className={homeIsActive ? `${styles.textActive}` : ''}>Inicio</span>
 				</li>
 				<li>
