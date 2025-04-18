@@ -51,7 +51,7 @@ export default function Register() {
 						</Button>
 						<div className={styles.loginButtonContainer}>
 							<p className={styles.haveAccount}>¿Ya tienes una cuenta?</p>
-							<RedirectButton variant='secondary' href='/auth/register'>
+							<RedirectButton variant='secondary' href='/auth/login'>
 								Iniciar sesión
 							</RedirectButton>
 						</div>
