@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proyecto entrevista técnica 'TodosGamers'
 
-## Getting Started
+Este es un proyecto construido con **Next.js 15** que implementa un sistema de autenticación básico utilizando **JWT, cookies y middleware** para proteger rutas. Las credenciales de los usuarios se almacenan en una base de datos **SQLite** a través de **Prisma ORM**.
 
-First, run the development server:
+## Funcionalidades principales
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Registro e inicio de sesión de usuarios
+- Validación de formularios del lado del servidor
+- Sesiones con JWT almacenadas en cookies
+- Rutas públicas y protegidas con redirección automática
+- Persistencia de datos con SQLite y Prisma
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Requisitos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Node.js 18 o superior
+- npm (o yarn/pnpm/bun)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Para esta explicación utilizaré pnpm como ejemplo.
 
-## Learn More
+## Instalación y ejecución
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clonar el repositorio:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- git clone https://github.com/mateopautasso/todos-gamers-technical-interview.git
+- cd tu-repo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- pnpm install
 
-## Deploy on Vercel
+## Configurar las variables de entorno
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+En el archivo '.env.example' se encuentra la estructura de variables de entorno necesarias para ejecutar el proyecto.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Inicializar la base de datos SQLite con Prisma
+
+pnpx prisma migrate dev --name init
+
+## Ejecutar el servidor en modo desarrollo
+
+pnpm run dev

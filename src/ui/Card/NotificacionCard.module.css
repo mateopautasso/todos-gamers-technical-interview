@@ -1,0 +1,33 @@
+.container {
+	width: 100%;
+	height: 72px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px;
+	background-color: var(--soft-orange);
+	border-left: solid 6px;
+}
+
+.warning {
+	border-color: var(--orange);
+}
+
+.infoContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.infoTitle,
+.infoContent {
+	color: var(--background);
+}
+
+.infoTitle {
+	font-size: var(--font-md);
+}
+
+.infoContent {
+	font-size: var(--font-sm);
+}

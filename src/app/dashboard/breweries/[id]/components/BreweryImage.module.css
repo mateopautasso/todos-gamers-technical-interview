@@ -1,0 +1,7 @@
+.imageContainer {
+	position: relative;
+	width: 156px;
+	height: 104px;
+	border-radius: 8px;
+	overflow: hidden;
+}

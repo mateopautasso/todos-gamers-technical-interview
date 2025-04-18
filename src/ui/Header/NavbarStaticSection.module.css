@@ -1,0 +1,16 @@
+.container {
+	position: relative;
+	display: flex;
+	gap: 16px;
+	align-items: center;
+}
+.container li {
+	cursor: pointer;
+}
+
+.logout {
+	min-width: max-content;
+	position: absolute;
+	bottom: -45px;
+	right: 0;
+}

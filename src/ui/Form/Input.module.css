@@ -1,0 +1,19 @@
+.input[type='text'],
+.input[type='password'] {
+	padding: 4px 6px;
+	font-size: var(--font-sm);
+	border: 2px solid var(--purple);
+	border-radius: 4px;
+	background-color: transparent;
+	color: var(--foreground);
+	outline: none;
+}
+.input[type='text']:focus,
+.input[type='password']:focus {
+	border-color: var(--pink);
+}
+
+.input[type='text']:disabled,
+.input[type='password']:disabled {
+	opacity: 0.5;
+}

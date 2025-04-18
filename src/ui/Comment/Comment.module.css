@@ -1,0 +1,50 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.userInfoContainer {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.userName {
+	font-size: var(--font-xs);
+}
+.response {
+	font-size: var(--font-xxs);
+	color: var(--pink);
+}
+
+.commentText {
+	font-size: var(--font-xs);
+}
+
+.limitText {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	line-clamp: 3;
+	-webkit-line-clamp: 2;
+}
+
+.commentContainer {
+	position: relative;
+}
+
+.commentChevron {
+	position: absolute;
+	right: 0;
+}
+
+.commentChevronActive {
+	transform: rotate(180deg);
+}

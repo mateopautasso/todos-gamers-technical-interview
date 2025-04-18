@@ -1,0 +1,46 @@
+.cardContainer {
+	width: 328px;
+	height: 200px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scrollbar-color: var(--background) var(--card-blue);
+	scrollbar-width: thin;
+	padding: 16px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	background-color: var(--card-blue);
+}
+
+.title {
+	font-size: var(--font-xl);
+	color: var(--foreground);
+}
+
+.infoContainer {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.infoItemsContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.infoItem {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.infoItem > p {
+	font-size: var(--font-xs);
+	color: var(--foreground);
+}
+
+.redirectButtonContainer {
+	width: 100%;
+}

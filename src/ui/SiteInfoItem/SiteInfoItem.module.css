@@ -1,0 +1,9 @@
+.infoItem {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.infoItem > p {
+	font-size: var(--font-xs);
+}

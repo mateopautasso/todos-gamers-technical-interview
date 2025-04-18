@@ -1,0 +1,26 @@
+.button {
+	width: 100%;
+	min-height: 32px;
+	border-radius: 8px;
+	padding-inline: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid transparent;
+	font-size: var(--font-sm);
+	font-weight: 700;
+	text-align: center;
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+	box-sizing: border-box;
+	color: var(--foreground);
+	cursor: pointer;
+}
+
+.primary {
+	background-image: linear-gradient(90deg, var(--purple), var(--pink)), linear-gradient(90deg, var(--purple), var(--pink));
+}
+
+.secondary {
+	background-image: linear-gradient(var(--background), var(--background)), linear-gradient(90deg, var(--purple), var(--pink));
+}

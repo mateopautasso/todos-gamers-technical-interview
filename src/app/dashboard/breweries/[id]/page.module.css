@@ -1,0 +1,19 @@
+.firstSection,
+.secondSection {
+	display: flex;
+	flex-direction: column;
+	padding-block: 16px;
+	gap: 24px;
+}
+
+.infoItemsContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.commentsContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
