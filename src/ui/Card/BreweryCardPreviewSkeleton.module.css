@@ -1,0 +1,19 @@
+.cardContainer {
+	width: 328px;
+	height: 200px;
+	border-radius: 8px;
+	background-color: var(--card-blue);
+	animation: basic-pulse 2s infinite;
+}
+
+@keyframes basic-pulse {
+	0% {
+		opacity: 120%;
+	}
+	50% {
+		opacity: 50%;
+	}
+	100% {
+		opacity: 120%;
+	}
+}

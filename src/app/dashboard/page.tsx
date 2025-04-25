@@ -1,14 +1,12 @@
 import styles from './page.module.css'
+import { Suspense } from 'react'
 import { SectionTitle } from '@/ui/Title'
-import { BreweryCardPreview, NotificacionCard } from '@/ui/Card'
-import { BreweryService } from '@/lib/services'
+import { NotificacionCard } from '@/ui/Card'
 import { topNotificationMock as noti } from '@/lib/mocks'
-import { CardCarousel } from '@/ui/Carousel'
+import { BreweriesPreviewList, BreweriesPreviewListSkeleton } from './components'
 
 export default async function Home() {
 	const notification = true
-	const { data: breweriesPreview } = await BreweryService.getByFilters({ page: 1, per_page: 5 })
-	const { data: breweriesPreviewByCity } = await BreweryService.getByFilters({ page: 1, per_page: 5, by_state: 'California' })
 
 	return (
 		<div>
@@ -18,29 +16,17 @@ export default async function Home() {
 					<section className={styles.siteOptions}>
 						<SectionTitle>Todas las opciones</SectionTitle>
 
-						{breweriesPreview && (
-							<CardCarousel>
-								{breweriesPreview.map((brewery) => (
-									<li key={brewery.id}>
-										<BreweryCardPreview {...brewery} />
-									</li>
-								))}
-							</CardCarousel>
-						)}
+						<Suspense fallback={<BreweriesPreviewListSkeleton />}>
+							<BreweriesPreviewList filters={{ page: 1, per_page: 5 }} />
+						</Suspense>
 					</section>
 
 					<section className={styles.siteOptions}>
 						<SectionTitle>Opciones en california</SectionTitle>
 
-						{breweriesPreviewByCity && (
-							<CardCarousel>
-								{breweriesPreviewByCity.map((brewery) => (
-									<li key={brewery.id}>
-										<BreweryCardPreview {...brewery} />
-									</li>
-								))}
-							</CardCarousel>
-						)}
+						<Suspense fallback={<BreweriesPreviewListSkeleton />}>
+							<BreweriesPreviewList filters={{ page: 1, per_page: 5, by_state: 'California' }} />
+						</Suspense>
 					</section>
 				</div>
 			</main>
