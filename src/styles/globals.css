@@ -77,12 +77,6 @@ li {
 	padding: 0 20px;
 }
 
-.carousel {
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	-webkit-overflow-scrolling: touch;
-}
-
 .purplePinkGradient {
 	background: linear-gradient(90deg, var(--purple), var(--pink));
 }

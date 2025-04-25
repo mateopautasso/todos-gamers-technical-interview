@@ -1,5 +1,4 @@
 import styles from './BreweryCardPreview.module.css'
-import Link from 'next/link'
 import { MapPin, Phone } from 'lucide-react'
 import { BreweryPreview } from '@/lib/interfaces'
 import { SiteInfoItem } from '../SiteInfoItem'

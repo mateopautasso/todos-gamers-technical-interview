@@ -13,6 +13,19 @@ export interface BreweryPreview extends Omit<BreweryProfile, 'images' | 'comment
 	avatar: string
 }
 
-export enum StatesWithBreweries {
-	CALIFORNIA = 'California',
+export type BreweryType = 'micro' | 'nano' | 'regional' | 'brewpub' | 'brewpub' | 'planning' | 'bar' | 'contract' | 'proprietor' | 'closed'
+
+export interface BreweryFilters {
+	search?: string
+	by_city?: string
+	by_country?: string
+	by_dist?: string
+	by_ids?: string
+	by_name?: string
+	by_state?: string
+	by_postal?: string
+	by_type?: BreweryType
+	page?: number
+	per_page?: number
+	sort?: 'asc' | 'desc'
 }

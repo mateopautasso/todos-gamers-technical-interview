@@ -1,31 +1,24 @@
 import { getBreweryPreviewAdapter, getBreweryProfileAdapter } from '../adapters/brewery.adapter'
-import { BREWERY_API_URL, ApiResponse, BreweryPreview, BreweryProfile, StatesWithBreweries } from '../interfaces'
+import { BREWERY_API_URL, ApiResponse, BreweryPreview, BreweryProfile, BreweryFilters } from '../interfaces'
 
 export class BreweryService {
 	//
-	static async getPreviewList(page: number, perPage: number): Promise<ApiResponse<BreweryPreview[] | []>> {
-		const response = await fetch(`${BREWERY_API_URL}?page=${page}&per_page=${perPage}`)
+	static async getByFilters(filters: BreweryFilters): Promise<ApiResponse<BreweryPreview[] | []>> {
+		let queryParams = ''
+		const filtersEntries = Object.entries(filters)
 
-		let breweryList
-		if (response.ok) {
-			breweryList = await response.json()
-		} else {
-			breweryList = null
+		if (filtersEntries.length > 0) {
+			queryParams = '?'
+			filtersEntries.forEach(([key, value], index) => {
+				if (index !== filtersEntries.length - 1) {
+					queryParams = queryParams + `${key}=${value}&`
+				} else {
+					queryParams = queryParams + `${key}=${value}`
+				}
+			})
 		}
 
-		return {
-			status: response.status,
-			data: breweryList ? breweryList.map(getBreweryPreviewAdapter) : breweryList,
-		}
-	}
-
-	//
-	static async getPreviewListByState(
-		page: number,
-		perPage: number,
-		state: StatesWithBreweries
-	): Promise<ApiResponse<BreweryPreview[] | []>> {
-		const response = await fetch(`${BREWERY_API_URL}?by_state=${state}&page=${page}&per_page=${perPage}`)
+		const response = await fetch(`${BREWERY_API_URL}${queryParams}`)
 
 		let breweryList
 		if (response.ok) {

@@ -1,0 +1,10 @@
+.carousel {
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+}
+
+.ul {
+	display: flex;
+	gap: 8px;
+}

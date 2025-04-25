@@ -1,8 +1,6 @@
 import '@/styles/globals.css'
 import { Roboto } from 'next/font/google'
 import type { Metadata } from 'next'
-import { Header } from '@/ui/Header'
-import { Footer } from '@/ui/Footer'
 
 const roboto = Roboto({ variable: '--font-roboto', subsets: ['latin'] })
 

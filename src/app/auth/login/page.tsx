@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import styles from './page.module.css'
 import { useActionState } from 'react'
 import { SectionTitle } from '@/ui/Title'
